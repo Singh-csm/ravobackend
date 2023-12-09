@@ -45,7 +45,7 @@ mongoose
 app.post("/user", upload.any(), route);
 
 app.use("/", route);
-
+app.get("/" , (req, res) => { res.send("i am ravo") });
 app.listen(process.env.PORT || 8000, function () {
   console.log("Express app running on port Ravo " + (process.env.PORT || 8000));
 });
